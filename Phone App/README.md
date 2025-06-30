@@ -160,7 +160,9 @@ npx eas build --platform android   # or ios
    - `humidity` (float)
    - `weight` (float)
    - `created_at` (timestamp)
-For a faster way with everything already done, use the `DataBase.sql` file.
+
+### For a faster way with everything already done, use the `DataBase.sql` file.
+
 3. Enable **Realtime** for this table (in table settings).
 4. In the code, set your Supabase URL and anon key in:
 
