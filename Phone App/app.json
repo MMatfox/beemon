@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Beehive monitor",
+    "slug": "beehive-monitor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/officialIcon3.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "BeehiveMonitor",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "BeehiveMonitor"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "23438915-9ec8-4364-b517-ee7a854762e2"
+      }
+    }
+  }
+}

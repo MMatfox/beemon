@@ -1,0 +1,122 @@
+{
+  "_comment": "Header.js",
+
+  "placeholderSelectHive": "Chọn tổ ong…",
+
+  
+  "_comment": "AlertsSection.js",
+
+  "recentAlerts": "Cảnh báo gần đây",
+  "noRecentAlerts": "Không có cảnh báo nào.",
+  "configureAlerts": "Cài đặt cảnh báo",
+
+  
+  "_comment": "OverviewSection.js & ChartsSection.js & chartHelpers.js",
+
+  "dataGraph": "Biểu đồ dữ liệu",
+  "temperature": "Nhiệt độ",
+  "humidity": "Độ ẩm",
+  "weight": "Khối lượng",
+  "hiveData": "Dữ liệu tổ ong",
+  "day": "NG",
+  "hour": "H",
+
+  
+  "_comment": "DashboardScreen.tsx",
+
+  "addHiveButton": "Thêm tổ ong",
+
+  
+  "_comment": "MediaSection.js",
+
+  "multimediaStream": "Luồng đa phương tiện",
+  "audio":"Âm thanh",
+  "video":"Băng hình",
+  "listenLive": "Nghe trực tiếp",
+  "listenRecording": "Nghe bản ghi",
+  "watchLive": "Xem trực tiếp",
+  "viewRecording": "Xem bản ghi",
+  "chooseDateTime": "Chọn ngày và giờ",
+  "validate": "Xác nhận",
+
+  
+  "_comment": "OtherInfoSection.js",
+
+  "additionalInfo": "Thông tin bổ sung",
+  "hide": "Ẩn",
+  "display": "Hiển thị",
+  "details": "chi tiết",
+  "localWeather": "Thời tiết địa phương",
+  "queenStatus": "Tình trạng ong chúa",
+  "present": "Hiện tại",
+  "presentYes": "Có",
+  "presentNo": "Không",
+  "pests": "Ký sinh",
+  "noneDetected": "Không phát hiện",
+
+  
+  "_comment": "HiveSettingsListModal.js",
+
+  "managingHivesTitle": "Quản lý tổ ong",
+  "noHiveConfigured": "Chưa cấu hình tổ ong.",
+  "code": "Mã số",
+  "addNewHive": "Thêm tổ ong mới",
+  "confirmDeletionTitle": "Xác nhận xoá",
+  "confirmDeletionMessage": "Xoá tổ ong \"{{name}}\"?",
+
+  
+  "_comment": "AddEditHiveModal.js",
+
+  "addHiveModalTitleNew": "Thêm tổ ong",
+  "addHiveModalTitleEdit": "Sửa tổ ong",
+  "hiveNameLabel": "Tên tổ ong *",
+  "hiveNamePlaceholder": "Ví dụ: Tổ ong Alpha",
+  "hiveCodeLabel": "Mã tổ ong *",
+  "hiveCodePlaceholder": "Mã định danh duy nhất",
+  "passwordLabel": "Mật khẩu",
+  "accessPasswordPlaceholder": "Mật khẩu truy cập",
+  "save": "Lưu",
+  "add": "Thêm",
+
+  
+  "_comment": "AlertSettingsModal.js",
+
+  "configureAlertThresholds": "Cấu hình ngưỡng cảnh báo",
+  "temperatureLabel": "Nhiệt độ (°C)",
+  "humidityLabel": "Độ ẩm (%)",
+  "weightLabel": "Khối lượng (kg)",
+  "min": "Thấp nhất",
+  "max": "Cao nhất",
+
+  
+  "_comment": "ConfirmationModal.js",
+
+  "cancel": "Huỷ",
+  "confirm": "Xác nhận",
+
+  
+  "_comment": "SettingsSection.js",
+
+  "settings": "Cài đặt",
+  "selectLanguage": "Ngôn ngữ",
+
+
+  "beehiveManagement": "Quản lý tổ ong",
+  "beehiveManagementOffline": "Không thể quản lý tổ ong khi ngoại tuyến",
+  "doorControl": "Cửa tổ ong",
+  "openDoor": "Mở",
+  "closeDoor": "Đóng",
+  "repulsiveControl": "Hệ thống xua đuổi",
+  "activateRepulsive": "Xua đuổi",
+  "systemControl": "Hệ thống",
+  "restartSystem": "Khởi động lại",
+  "confirmDoorOpen": "Mở cửa tổ ong",
+  "confirmDoorOpenMessage": "Bạn có chắc chắn muốn mở cửa tổ ong không?",
+  "confirmDoorClose": "Đóng cửa tổ ong",
+  "confirmDoorCloseMessage": "Bạn có chắc chắn muốn đóng cửa tổ ong không?",
+  "confirmRepulse": "Kích hoạt hệ thống xua đuổi",
+  "confirmRepulseMessage": "Bạn có chắc chắn muốn kích hoạt hệ thống xua đuổi không? Hành động này có thể làm ong bị kích động.",
+  "confirmRestart": "Khởi động lại hệ thống",
+  "confirmRestartMessage": "Bạn có chắc chắn muốn khởi động lại hệ thống tổ ong không? Việc này sẽ tạm thời ngắt giám sát."
+}
+

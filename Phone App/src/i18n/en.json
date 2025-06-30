@@ -1,0 +1,123 @@
+{
+  "_comment": "Header.js",
+
+  "placeholderSelectHive": "Select a hive…",
+
+  
+  "_comment": "AlertsSection.js",
+
+  "recentAlerts": "Recent Alerts",
+  "noRecentAlerts": "No recent alerts.",
+  "configureAlerts": "Configure Alerts",
+
+  
+  "_comment": "OverviewSection.js & ChartsSection.js & chartHelpers.js",
+
+  "dataGraph": "Data Graph",
+  "temperature": "Temperature",
+  "humidity": "Humidity",
+  "weight": "Weight",
+  "hiveData": "Hive Data",
+  "day": "D",
+  "hour": "H",
+
+  
+  "_comment": "DashboardScreen.tsx",
+
+  "addHiveButton": "Add a hive",
+
+  
+  
+  "_comment": "MediaSection.js",
+
+  "multimediaStream": "Multimedia Stream",
+  "audio":"Audio",
+  "video":"Video",
+  "listenLive": "Listen live",
+  "listenRecording": "Listen to a recording",
+  "watchLive": "Watch live",
+  "viewRecording": "View a recording",
+  "chooseDateTime": "Choose date and time",
+  "validate": "Validate",
+
+  
+  "_comment": "OtherInfoSection.js",
+
+  "additionalInfo": "Additional Information",
+  "hide": "Hide",
+  "display": "Display",
+  "details": "the details",
+  "localWeather": "Local Weather",
+  "queenStatus": "Queen Status",
+  "present": "Present",
+  "presentYes": "Yes",
+  "presentNo": "No",
+  "pests": "Pests",
+  "noneDetected": "None detected",
+
+  
+  "_comment": "HiveSettingsListModal.js",
+
+  "managingHivesTitle": "Managing Hives",
+  "noHiveConfigured": "No hive configured.",
+  "code": "Code",
+  "addNewHive": "Add a new hive",
+  "confirmDeletionTitle": "Confirm deletion",
+  "confirmDeletionMessage": "Delete the hive \"{{name}}\" ?",
+
+  
+  "_comment": "AddEditHiveModal.js",
+
+  "addHiveModalTitleNew": "Add a Hive",
+  "addHiveModalTitleEdit": "Edit Hive",
+  "hiveNameLabel": "Name of the hive *",
+  "hiveNamePlaceholder": "Example: Hive Alpha",
+  "hiveCodeLabel": "Hive code *",
+  "hiveCodePlaceholder": "Unique identifier",
+  "passwordLabel": "Password",
+  "accessPasswordPlaceholder": "Access password",
+  "save": "Save",
+  "add": "Add",
+
+  
+  "_comment": "AlertSettingsModal.js",
+
+  "configureAlertThresholds": "Configure Alert Thresholds",
+  "temperatureLabel": "Temperature (°C)",
+  "humidityLabel": "Humidity (%)",
+  "weightLabel": "Weight (kg)",
+  "min": "Min",
+  "max": "Max",
+
+  
+  "_comment": "ConfirmationModal.js",
+
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+
+  
+  "_comment": "SettingsSection.js",
+
+  "settings": "Settings",
+  "selectLanguage": "Language",
+
+  
+  "beehiveManagement": "Beehive Management",
+  "beehiveManagementOffline": "Beehive management unavailable while offline",
+  "doorControl": "Door",
+  "openDoor": "Open",
+  "closeDoor": "Close",
+  "repulsiveControl": "Repulsive",
+  "activateRepulsive": "Repulse",
+  "systemControl": "System",
+  "restartSystem": "Restart",
+  "confirmDoorOpen": "Open Door",
+  "confirmDoorOpenMessage": "Are you sure you want to open the beehive door?",
+  "confirmDoorClose": "Close Door",
+  "confirmDoorCloseMessage": "Are you sure you want to close the beehive door?",
+  "confirmRepulse": "Activate Repulsive",
+  "confirmRepulseMessage": "Are you sure you want to activate the repulsive system? This action may disturb the bees.",
+  "confirmRestart": "Restart System",
+  "confirmRestartMessage": "Are you sure you want to restart the beehive system? This will temporarily interrupt monitoring."
+
+}

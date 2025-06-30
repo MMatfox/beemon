@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Capteurs</title>
+
+  <!-- React -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+  <!-- Recharts -->
+  <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+
+  <style>
+    html,body,#root{margin:0;height:100%;background:#111827;color:#e2e8f0;font-family:sans-serif}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    /** -----------  Composant Recharts  ------------ **/
+    const { LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Line, ResponsiveContainer } = Recharts;
+
+    // Le state global pour mettre à jour les séries à la volée
+    let setData = () => {};
+
+    function ChartApp() {
+      const [range, setRange] = React.useState('24h');
+      const [datasets, setDatasets] = React.useState(window.initialData || {});
+
+      // Expose setter pour postMessage
+      React.useEffect(() => { setData = (d) => setDatasets(d); }, []);
+
+      const data = datasets[range] || [];
+
+      return (
+        React.createElement('div', { style: { height: '100%', padding: 8 } },
+          React.createElement('div', { style:{display:'flex', gap:4, marginBottom:8}},
+            ['24h','7d','30d'].map(r =>
+              React.createElement('button', {
+                key:r,
+                onClick:()=>setRange(r),
+                style:{
+                  flex:1,padding:6,
+                  background: range===r?'#3b82f6':'#374151',
+                  color:'#fff',border:'none',borderRadius:6
+                }
+              }, r.toUpperCase())
+            )
+          ),
+          React.createElement(ResponsiveContainer, { width:'100%', height:'80%' },
+            React.createElement(LineChart, { data, margin:{top:5,right:0,left:-25,bottom:5}},
+              React.createElement(CartesianGrid,{strokeDasharray:'3 3',strokeOpacity:0.2}),
+              React.createElement(XAxis,{dataKey:'time',stroke:'#94a3b8',tick:{fontSize:9}}),
+              React.createElement(YAxis,{yAxisId:'left',stroke:'#f87171',tick:{fontSize:9},
+                label:{value:'Temp (°C)',angle:-90,position:'insideLeft',fill:'#f87171',fontSize:10,dx:-2}}),
+              React.createElement(YAxis,{yAxisId:'right',orientation:'right',stroke:'#60a5fa',tick:{fontSize:9},
+                label:{value:'Hum (%)',angle:-90,position:'insideRight',fill:'#60a5fa',fontSize:10,dx:5}}),
+              React.createElement(Tooltip,null),
+              React.createElement(Legend,{wrapperStyle:{fontSize:10,color:'#94a3b8',paddingTop:5}}),
+              React.createElement(Line,{yAxisId:'left',type:'monotone',dataKey:'temp',stroke:'#f87171',strokeWidth:2,dot:false,name:'Temp.'}),
+              React.createElement(Line,{yAxisId:'right',type:'monotone',dataKey:'hum',stroke:'#60a5fa',strokeWidth:2,dot:false,name:'Hum.'})
+            )
+          )
+        )
+      );
+    }
+
+    ReactDOM.render(React.createElement(ChartApp), document.getElementById('root'));
+
+    /** -----------  Bridge WebView → React Native  ------------ **/
+    // Écoute les messages entrants
+    window.addEventListener('message', (e) => {
+      try {
+        const msg = JSON.parse(e.data);
+        if (msg.type === 'UPDATE_DATA') {
+          setData(msg.payload);          // met à jour les datasets
+        }
+      } catch(err){ console.error(err); }
+    });
+
+    // Exemple pour renvoyer un message
+    const notifyNative = (txt) => {
+      window.ReactNativeWebView?.postMessage(JSON.stringify({ log: txt }));
+    };
+  </script>
+</body>
+</html>
