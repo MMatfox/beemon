@@ -93,7 +93,7 @@ S_dB = librosa.power_to_db(S, ref=np.max)
 - scikit-learn
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements
 ```
 
 ---
@@ -101,22 +101,9 @@ pip install -r requirements.txt
 ## 🚀 How to Train
 
 ```bash
-python train_cnn.py       # Train CNN from scratch
-python train_finetune.py  # Fine-tune MobileNetV2
+CNN.py       # Train CNN from scratch
+finetuning.py  # Fine-tune MobileNetV2
 ```
-
----
-
-## 🔍 How to Evaluate
-
-```bash
-python evaluate_models.py
-```
-
-All models are tested on separate test spectrogram folders.  
-Metrics include accuracy, precision, recall and F1-score.
-
----
 
 ## 📦 Deployment
 
