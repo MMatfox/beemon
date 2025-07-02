@@ -2,6 +2,8 @@
 
 **React Native / Expo** application for real-time monitoring of a beehive’s **temperature**, **humidity**, and **weight**, using connected sensors and **Supabase**.
 
+*Original repository is coming from https://iut-git.unice.fr/vietnam2025/beehive-monitor*
+
 ---
 
 ## ✨ Main Features
