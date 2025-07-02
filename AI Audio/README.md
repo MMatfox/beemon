@@ -122,10 +122,3 @@ Metrics include accuracy, precision, recall and F1-score.
 
 The final CNN is exported in TensorFlow Lite format (`.tflite`) for use on edge devices.
 
----
-
-## 👤 Author
-
-**Tom Popo**  
-Polytech Nice – Internship 2025  
-Air France Sophia Antipolis
