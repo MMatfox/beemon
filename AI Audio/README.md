@@ -5,7 +5,7 @@ This project focuses on detecting the presence of a queen bee in a hive using sh
 The audio files are transformed into mel spectrograms, which are then classified by convolutional neural networks (CNNs).
 
 ---
-
+DATASET LINK : https://drive.google.com/drive/folders/1cepNqlm2OMJFbytdiCKJBw22amkjNphI
 ## 📁 Project Structure
 
 ```
