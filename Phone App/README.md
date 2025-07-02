@@ -97,8 +97,8 @@ npm install -g react-native-cli
 ### 2. Clone and Install the App
 
 ```bash
-git clone https://iut-git.unice.fr/vietnam2025/beehive-monitor.git
-cd beehive-monitor
+git clone https://github.com/MMatfox/beemon
+cd Phone\ App
 
 npm install
 ```
