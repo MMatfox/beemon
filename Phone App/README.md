@@ -110,7 +110,7 @@ npm install
 ### 3. Run the App (Development Mode)
 
 ```bash
-expo start
+npx expo start
 ```
 
 This opens **Expo DevTools** in your browser.
