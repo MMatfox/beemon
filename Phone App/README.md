@@ -97,7 +97,7 @@ npm install -g react-native-cli
 ### 2. Clone and Install the App
 
 ```bash
-git clone https://github.com/MMatfox/beemon
+git clone https://github.com/MMatfox/beemon.git
 cd Phone\ App
 
 npm install
