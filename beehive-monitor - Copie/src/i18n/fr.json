@@ -1,0 +1,122 @@
+{
+  "_comment": "Header.js",
+
+  "placeholderSelectHive": "Sélectionner une ruche…",
+
+
+  "_comment": "AlertsSection.js",
+
+  "recentAlerts": "Alertes récentes",
+  "noRecentAlerts": "Aucune alerte récente.",
+  "configureAlerts": "Paramétrer les alertes",
+
+
+  "_comment": "OverviewSection.js & ChartsSection.js & chartHelpers.js",
+
+  "dataGraph": "Graphique des données",
+  "temperature": "Température",
+  "humidity": "Humidité",
+  "weight": "Poids",
+  "hiveData": "Données de la ruche",
+  "day": "J",
+  "hour": "H",
+
+
+  "_comment": "DashboardScreen.tsx",
+
+  "addHiveButton": "Ajouter une ruche",
+
+
+  "_comment": "MediaSection.js",
+
+  "multimediaStream": "Flux multimédia",
+  "audio":"Audio",
+  "video":"Vidéo",
+  "listenLive": "Écouter en direct",
+  "listenRecording": "Écouter un enregistrement",
+  "watchLive": "Regarder en direct",
+  "viewRecording": "Voir un enregistrement",
+  "chooseDateTime": "Choisir la date et l’heure",
+  "validate": "Valider",
+
+
+  "_comment": "OtherInfoSection.js",
+
+  "additionalInfo": "Informations supplémentaires",
+  "hide": "Masquer",
+  "display": "Afficher",
+  "details": "les détails",
+  "localWeather": "Météo locale",
+  "queenStatus": "Statut de la reine",
+  "present": "Prèsente",
+  "presentYes": "Oui",
+  "presentNo": "Non",
+  "pests": "Parasites",
+  "noneDetected": "Aucun détecté",
+
+
+  "_comment": "HiveSettingsListModal.js",
+
+  "managingHivesTitle": "Gestion des ruches",
+  "noHiveConfigured": "Aucune ruche configurée.",
+  "code": "Code",
+  "addNewHive": "Ajouter une nouvelle ruche",
+  "confirmDeletionTitle": "Confirmer la suppression",
+  "confirmDeletionMessage": "Supprimer la ruche « {{name}} » ?",
+
+
+  "_comment": "AddEditHiveModal.js",
+
+  "addHiveModalTitleNew": "Ajouter une ruche",
+  "addHiveModalTitleEdit": "Modifier la ruche",
+  "hiveNameLabel": "Nom de la ruche *",
+  "hiveNamePlaceholder": "Exemple: Ruche Alpha",
+  "hiveCodeLabel": "Code ruche *",
+  "hiveCodePlaceholder": "Identifiant unique",
+  "passwordLabel": "Mot de passe",
+  "accessPasswordPlaceholder": "Mot de passe d’accès",
+  "save": "Enregistrer",
+  "add": "Ajouter",
+
+
+  "_comment": "AlertSettingsModal.js",
+
+  "configureAlertThresholds": "Configurer les seuils d’alerte",
+  "temperatureLabel": "Température (°C)",
+  "humidityLabel": "Humidité (%)",
+  "weightLabel": "Poids (kg)",
+  "min": "Min",
+  "max": "Max",
+
+
+  "_comment": "ConfirmationModal.js",
+
+  "cancel": "Annuler",
+  "confirm": "Confirmer",
+
+
+  "_comment": "SettingsSection.js",
+
+  "settings": "Réglage",
+  "selectLanguage": "Langue",
+
+
+  "beehiveManagement": "Gestion de la Ruche",
+  "beehiveManagementOffline": "Gestion de la ruche indisponible en mode hors ligne",
+  "doorControl": "Porte",
+  "openDoor": "Ouvrir",
+  "closeDoor": "Fermer",
+  "repulsiveControl": "Répulsif",
+  "activateRepulsive": "Répulser",
+  "systemControl": "Système",
+  "restartSystem": "Redémarrer",
+  "confirmDoorOpen": "Ouvrir la Porte",
+  "confirmDoorOpenMessage": "Êtes-vous sûr de vouloir ouvrir la porte de la ruche ?",
+  "confirmDoorClose": "Fermer la Porte",
+  "confirmDoorCloseMessage": "Êtes-vous sûr de vouloir fermer la porte de la ruche ?",
+  "confirmRepulse": "Activer le Répulsif",
+  "confirmRepulseMessage": "Êtes-vous sûr de vouloir activer le système répulsif ? Cette action peut déranger les abeilles.",
+  "confirmRestart": "Redémarrer le Système",
+  "confirmRestartMessage": "Êtes-vous sûr de vouloir redémarrer le système de la ruche ? Ceci interrompra temporairement la surveillance."
+
+}
