@@ -1,83 +1,174 @@
-# Beehive Monitor 🐝📊
+# Beehive Monitor 🐝📊
 
-Application **React Native / Expo** permettant de surveiller en temps réel la température, l’humidité et le poids d’une ruche grâce à des capteurs connectés et à Supabase.
-
----
-
-## ✨ Fonctionnalités principales
-
-| Module                   | Description                                                                                                       |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------- |
-| **Dashboard**            | Vue principale affichant un aperçu instantané des trois capteurs et des graphiques historiques 24 h / 7 j / 30 j. |
-| **Alertes**              | Seuils min / max configurables + liste des alertes récentes.                                                      |
-| **Multimédia**           | Accès audio / vidéo en direct ou en différé (à intégrer).                                                         |
-| **Gestion de ruches**    | Ajout, édition, suppression de plusieurs ruches.                                                                  |
-| **Thème clair / sombre** | Bascule par simple appui.                                                                                         |
+**React Native / Expo** application for real-time monitoring of a beehive’s **temperature**, **humidity**, and **weight**, using connected sensors and **Supabase**.
 
 ---
 
-## 📁 Arborescence (simplifiée)
+## ✨ Main Features
+
+| Module                | Description                                                                                  |
+|----------------------|----------------------------------------------------------------------------------------------|
+| **Dashboard**         | Main view with live overview and 24h / 7d / 30d historical charts for the three sensors.     |
+| **Alerts**            | Configurable min/max thresholds + recent alerts list.                                        |
+| **Multimedia**        | Live or replay audio/video access (to be integrated).                                        |
+| **Hive Management**   | Add, edit, and delete multiple hives.                                                        |
+| **Light/Dark Theme**  | Toggle with a simple tap.                                                                    |
+
+---
+
+## 📁 Project Structure (Simplified)
 
 ```
 .
-├─ App.tsx               # point d’entrée Expo
-├─ metro.config.js       # polyfills Node & WebSocket
+├─ App.tsx               # Expo entry point
+├─ metro.config.js       # Node & WebSocket polyfills
 ├─ src/
-│  ├─ presenters/        # Hooks « Presenters » (MVP)
-│  ├─ views/             # Pages principales (DashboardScreen)
-│  │  └─components/
-│  │    ├─ common/       # Card, Button, Modal… réutilisables
-│  │    └─ sections/     # OverviewSection, ChartsSection, …
-│  ├─ models/            # Accès Supabase (sensorModel)
+│  ├─ presenters/        # “Presenter” hooks (MVP)
+│  ├─ views/             # Main pages (DashboardScreen)
+│  │  └─ components/
+│  │    ├─ common/       # Reusable UI: Card, Button, Modal...
+│  │    └─ sections/     # OverviewSection, ChartsSection...
+│  ├─ models/            # Supabase data access (sensorModel)
 │  └─ utils/             # Helpers (chartHelpers, etc.)
-└─ empty.js              # shim Node vide pour Metro
+└─ empty.js              # empty Node shim for Metro
 ```
 
 ---
 
-## 🚀 Mise en route
+## 🚀 Getting Started
 
-### 1. Prérequis
+### 0. Full Environment Setup (From Scratch)
 
-* **Node >= 18**
-* **Expo CLI** : `npm i -g expo-cli`
-* Compte **Supabase** avec table `sensor_data` (colonnes : `temperature`, `humidity`, `weight`, `created_at`).
-* Variables : `SUPABASE_URL` et `SUPABASE_KEY` (clé *anon*).
+#### ✅ Step 1 – Install Node.js
 
-### 2. Installation
+##### For macOS / Linux (via NVM):
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc   # or ~/.zshrc
+nvm install --lts
+node -v
+npm -v
+```
+
+##### For Windows:
+Download and install Node.js LTS from:  
+👉 https://nodejs.org
+
+Then confirm installation:
 
 ```bash
-# Clone du dépôt
+node -v
+npm -v
+```
+
+---
+
+#### ✅ Step 2 – Install Expo CLI
+
+```bash
+npm install -g expo-cli
+expo --version
+```
+
+---
+
+#### ✅ Step 3 – (Optional) Install React Native CLI
+
+```bash
+npm install -g react-native-cli
+```
+
+> Only needed if you want to create or run pure React Native projects (not required for this app which uses Expo).
+
+---
+
+### 1. Project Dependencies
+
+- **Node.js >= 18**
+- **Expo CLI**
+- A **Supabase** project with a `sensor_data` table containing:
+  - `temperature`, `humidity`, `weight`, `created_at`
+- Environment variables:
+  - `SUPABASE_URL`
+  - `SUPABASE_KEY` (public *anon* key)
+
+---
+
+### 2. Clone and Install the App
+
+```bash
 git clone https://iut-git.unice.fr/vietnam2025/beehive-monitor.git
 cd beehive-monitor
 
-# Dépendances JS
 npm install
 ```
 
-### 3. Lancement en développement
+---
+
+### 3. Run the App (Development Mode)
 
 ```bash
 expo start
 ```
 
-> L’application démarre sur votre appareil / émulateur via le QR‑code Expo.
+This opens **Expo DevTools** in your browser.
 
-### 4. Build natif (optionnel)
+#### 📱 Run on your physical phone (Recommended)
 
-```bash
-expo build:android   # ou expo build:ios
-```
+1. Install **Expo Go**:
+   - iOS: https://apps.apple.com/app/expo-go/id982107779
+   - Android: https://play.google.com/store/apps/details?id=host.exp.exponent
+
+2. Connect your phone to the **same Wi-Fi network** as your computer.
+
+3. Open **Expo Go**, scan the QR code shown in the browser.
+
+The app will launch directly on your device.
 
 ---
 
-## ⚙️ Configuration Supabase
+#### 🖥️ Run on an emulator
 
-1. Créer un projet Supabase
-2. Activer `Realtime` sur la table **sensor\_data**
-3. Copier l’URL et la clé *anon* dans `src/models/supabaseClient.ts`
+##### Android:
+1. Install Android Studio and set up a virtual device.
+2. In Expo DevTools, click **"Run on Android device/emulator"**.
+
+##### iOS (Mac only):
+1. Install Xcode and open Simulator.
+2. In Expo DevTools, click **"Run on iOS simulator"**.
+
+---
+
+### 4. (Optional) Build Native App (APK / IPA)
+
+#### Using EAS Build:
+
+```bash
+npx expo install eas-cli
+npx eas build --platform android   # or ios
+```
+
+> You'll need to log in with an Expo account and follow setup instructions.
+
+---
+
+## ⚙️ Supabase Setup
+
+1. Go to https://supabase.com and create a project.
+2. Create a `sensor_data` table with columns:
+   - `temperature` (float)
+   - `humidity` (float)
+   - `weight` (float)
+   - `created_at` (timestamp)
+
+### For a faster way with everything already done, use the `DataBase.sql` file.
+
+3. Enable **Realtime** for this table (in table settings).
+4. In the code, set your Supabase URL and anon key in:
 
 ```ts
+// src/models/supabaseClient.ts
+
 export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   realtime: { WebSocket: ws },
 });
@@ -85,17 +176,22 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
 
 ---
 
-## 🛠️ Notes techniques
+## 🛠️ Technical Notes
 
-* **Polyfills Metro** : `metro.config.js` redirige `ws` vers *isomorphic‑ws* et neutralise les modules Node (`net`, `tls`…).
-* **MVP Pattern** : Utiliser le modèle Modèle-Vue-Presenteur
-* **TypeScript** activé, ESLint + Prettier conseillés.
+- **Metro Polyfills**: `metro.config.js` handles unsupported Node modules like `net`, `tls` by redirecting `ws` to `isomorphic-ws`.
+- **MVP Architecture**: Project follows the Model-View-Presenter pattern.
+- Uses **TypeScript**, with ESLint + Prettier recommended for consistency.
 
 ---
 
-### 🌐 Internationalisation
+### 🌐 Internationalization
 
-L’app utilise **i18next** (+ `expo-localization`) :  
-- Fichiers de langue dans `src/i18n/*.json`  
-- Détection auto de la locale (`expo-localization`)  
-- Changement à chaud avec `i18n.changeLanguage('fr')`.
+Uses **i18next** and `expo-localization`.
+
+- Language files are in `src/i18n/*.json`
+- Auto-detects system locale
+- Manual language change example:
+
+```ts
+i18n.changeLanguage('fr');
+```
